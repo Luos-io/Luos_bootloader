@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "bootloader_core.h"
-#include "luos_hal.h"
+#include "luos.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,7 +90,10 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  LuosBootloader_Run();
+  while (1)
+  {
+    LUOS_RUN()
+  }
   /* USER CODE END 3 */
 }
 /**

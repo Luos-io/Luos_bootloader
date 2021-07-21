@@ -27,7 +27,7 @@
 #include <stdlib.h>      // Defines EXIT_FAILURE
 #include "definitions.h" // SYS function prototypes
 
-#include "bootloader_core.h"
+#include "luos.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -41,7 +41,10 @@ int main(void)
   SYS_Initialize(NULL);
 
   // launch bootloader app
-  LuosBootloader_Run();
+  while(1)
+  {
+    LUOS_RUN()
+  }
 
   /* Execution should not come here during normal operation */
 
