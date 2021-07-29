@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "luos.h"
+#include "test_lib.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,7 +96,10 @@ int main(void)
 
   while (1)
   {
-    LUOS_RUN();
+    if (foo(10, 12) == 25)
+    {
+      LUOS_RUN();
+    }
   }
 
   /* USER CODE END 3 */
